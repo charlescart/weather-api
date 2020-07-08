@@ -2,9 +2,9 @@
 import publicIp from 'public-ip';
 
 export default class WeatherRepository {
-  static async location(): Promise<string> {
-    const userIp = await publicIp.v4();
+  static async location(userIp: string | undefined): any {
+    const serverIp = await publicIp.v4();
     console.log(`Ip server: ${userIp}`);
-    return userIp;
+    return { userIp, serverIp };
   }
 }

@@ -12,8 +12,9 @@ import WeatherRepository from './WeatherRepository';
 export default class AuthController {
   @Get('/location')
   location(@Req() req: Request): unknown {
-    console.log(`Ip Cliente: ${req.connection.remoteAddress}`);
-    return WeatherRepository.location();
+    console.log(`Ip Cliente: ${req.connection}`);
+    const userIp: string | undefined = req.connection.remoteAddress;
+    return WeatherRepository.location(userIp);
   }
 
   // @Get('/current/:city')
