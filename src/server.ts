@@ -5,7 +5,7 @@ import express from 'express';
 const app = express();
 
 useExpressServer(app, {
-  routePrefix: '/api',
+  routePrefix: '/v1',
   cors: true,
   controllers: [`${__dirname}/features/**/*Controller.ts`],
 });
