@@ -13,14 +13,8 @@ import WeatherRepository from './WeatherRepository';
 @UseBefore(requestIp.mw())
 export default class AuthController {
   @Get('/location')
-  location(@Req() req: Request, @HeaderParam('x-forwarded-for') ipA: string): unknown {
-    console.log(req.connection.remoteAddress);
-    console.log(`x-forwarded-for: ${ipA}`);
-    console.log(`ip: ${req.ip}`);
-    console.log(`ips: ${req.ips}`);
-    console.log(`ip library: ${req.clientIp}`);
-    const userIp: string | undefined = req.connection.remoteAddress;
-    return WeatherRepository.location(userIp);
+  location(@Req() req: Request): unknown {
+    return WeatherRepository.location(req.clientIp);
   }
 
   // @Get('/current/:city')

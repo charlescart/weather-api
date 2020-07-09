@@ -1,10 +1,8 @@
 /* eslint-disable no-console */
-import publicIp from 'public-ip';
+import { lookup } from 'geoip-lite';
 
 export default class WeatherRepository {
-  static async location(userIp: string | undefined): any {
-    const serverIp = await publicIp.v4();
-    console.log(`Ip server: ${serverIp}`);
-    return { userIp, serverIp };
+  static async location(clientIp: string): any {
+    return { userIp, serverIp, geo: lookup(clientIp) };
   }
 }
