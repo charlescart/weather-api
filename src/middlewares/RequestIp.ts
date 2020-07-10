@@ -2,11 +2,12 @@
 /* eslint-disable class-methods-use-this */
 import { ExpressMiddlewareInterface } from 'routing-controllers';
 import { Request, Response, NextFunction } from 'express';
+import { getClientIp } from 'request-ip';
 
-export default class Authentication implements ExpressMiddlewareInterface {
+type Ip = string | null;
+export default class RequestIp implements ExpressMiddlewareInterface {
   use(req: Request, res: Response, next: NextFunction) {
-    // eslint-disable-next-line no-console
-    console.log('middleware authentication...');
+    req.query.clientIp = getClientIp(req) as string | undefined;
     next();
   }
 }

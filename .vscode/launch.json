@@ -7,7 +7,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Charles",
+      "name": "Weather Api",
       "skipFiles": [
         "<node_internals>/**"
       ],
