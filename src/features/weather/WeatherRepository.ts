@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
-import { Lookup } from 'geoip-lite';
+// import axios from 'axios';
 import WeatherService from './WeatherService';
-// import { GetGeoForIp } from './WeatherTypes';
+import ILocationByIp, { ILocation } from './Interfaces/ILocationByIp';
 
 export default class WeatherRepository {
-  static location(clientIp: string): unknown {
-    const locationByIp: Lookup = WeatherService.locationByIp(clientIp);
-    return { clientIp, locationByIp };
+  static async location(clientIp: string): Promise<ILocation> {
+    const infoFromYourIp: ILocationByIp = WeatherService.locationByIp(clientIp);
+    const weather = await WeatherService.WeatherByCoordinates(infoFromYourIp.coord);
+    return { clientIp, infoFromYourIp, weather };
   }
 }

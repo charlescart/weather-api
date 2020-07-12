@@ -3,7 +3,6 @@ import { useExpressServer } from 'routing-controllers';
 import express from 'express';
 
 const app = express();
-// app.set('trust proxy', true);
 
 useExpressServer(app, {
   defaultErrorHandler: false,

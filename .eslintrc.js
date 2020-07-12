@@ -41,6 +41,6 @@ module.exports = {
         ts: 'never',
       },
     ],
-    'max-len': ['error', { code: 115 }],
+    'max-len': ['error', { code: 116 }],
   },
 };

@@ -8,6 +8,6 @@ const port = process.env.PORT || 3000;
 export default class AuthController {
   @Get('/')
   home(@Res() res: Response): Response {
-    return res.json({ message: `Api is running in ${port}` });
+    return res.json({ message: `Api is running in port: ${port}` });
   }
 }
