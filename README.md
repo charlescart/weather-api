@@ -3,12 +3,12 @@
 ## Api Running in heroku ~>
 <p align="center">
 <a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
-<img src="https://tiansss.github.io/img/heroku.png" alt="" style=" margin: auto; display: block;">
+<img src="https://tiansss.github.io/img/heroku.png" alt="" style=" margin: auto; display: block; max-width: 30%;">
 </a>
 </p>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/charlescart/weather-api/master/src/public/postman_api.gif" alt="" style="max-width:100%;margin: auto;display: block;">
+<img src="https://raw.githubusercontent.com/charlescart/weather-api/master/src/public/postman_api.gif" alt="" style="max-width:100%; margin: auto;display: block;">
 </p>
 
 ## Instalación
@@ -32,18 +32,18 @@ npm i
 npm start
 ```
 <p align="center">
-<a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
-<img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
-</a>
+<img src="https://raw.githubusercontent.com/charlescart/weather-api/master/src/public/npm%20start.gif" alt="" style="max-width:100%;margin: auto;display: block;">
 </p>
 
 5. Para generar la transpilacion de TypeScript a Js a traves de la consola ubicados en la raiz del proyecto lanzar el comando `npm run tsc`. El transpilado se genera en la raiz del proyecto especificamente en la carpeta dist `/dist`.
 <br>***Nota: este paso es opcional y solo si quieres ver el codigo compilado.***
 
+
 > # Como usar
+
 ***coleccion de Postman del Api***
-<br> [Documentación Detallada Online](https://documenter.getpostman.com/view/11620246/Szzg8yR1)
-<br> [Backup de Postman](https://documenter.getpostman.com/view/11620246/Szzg8yR1)
+<br> [Documentación Detallada Online](https://documenter.getpostman.com/view/11620246/T17Nb4nu)
+<br> [Backup de Postman](https://github.com/charlescart/weather-api/blob/master/src/public/Weather%20Api.json)
 >
 ***Ejemplo #1:*** Obtiene informacion del clima a traves de geolocalizacion de IP.
 <br> Metodo ***GET***
@@ -185,21 +185,22 @@ Respuesta:
 ```
 npm t
 ```
-salida:
-<a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
-<img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
-</a>
+Ejemplo:
+<p align="center">
+<img src="https://raw.githubusercontent.com/charlescart/weather-api/master/src/public/npm%20t.gif" alt="" style="max-width:100%;margin: auto;display: block;">
+</p>
 
 2. ejecutar ***coverage*** con Jest:
 ```
 npm run test:coverage
 ```
-salida:
-<a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
-<img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
-</a>
+Ejemplo:
+<p align="center">
+<img src="https://raw.githubusercontent.com/charlescart/weather-api/master/src/public/npm%20run%20test_coverage.gif" alt="" style="max-width:100%;margin: auto;display: block;">
+</p>
 
 Nota: una vez generado el coverage con Jest podrá ir a la raiz del proyecto y dirigirse a:  `/coverage/lcov-report/index.html` y abrir el ***index.html*** con su navegador, así podrá tener una mejor detalle del coverage generado por Jest. 
-<a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
-<img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
-</a>
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/charlescart/weather-api/master/src/public/coverage_html.gif" alt="" style="margin: auto;display: block;">
+</p>
