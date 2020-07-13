@@ -1,10 +1,9 @@
 # Challenge Weather Api
 ###### Autor: Charles Rodríguez
 ## Api Running in heroku ~>
-[![Build Status](https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg)](https://weather-api-charles.herokuapp.com/v1)
 
 <a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
-<img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
+<img src="https://tiansss.github.io/img/heroku.png" alt="" style="max-width:100%;margin: auto;display: block;">
 </a>
 <a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
 <img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
