@@ -9,7 +9,7 @@ export default class RequestIp implements ExpressMiddlewareInterface {
     req.params.clientIp = getClientIp(req) || '';
 
     if (process.env.NODE_ENV === 'development' && req.params.clientIp === '::1') {
-      req.params.clientIp = '186.122.141.220'; // testing in local
+      // req.params.clientIp = '186.122.141.220'; // testing in local
     }
 
     next();
