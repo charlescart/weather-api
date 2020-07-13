@@ -11,10 +11,13 @@ export default class CustomErrorHandler implements ExpressErrorMiddlewareInterfa
 
     res.status(error.httpCode);
     response.msg = error.message;
-    response.msg = error.errors.map((e: any) => {
-      const { property, constraints } = e;
-      return { property, constraints };
-    });
+    if (error.errors) {
+      response.msg = error.errors.map((e: any) => {
+        const { property, constraints } = e;
+        return { property, constraints };
+      });
+    }
+
 
     response.error = error.name;
 

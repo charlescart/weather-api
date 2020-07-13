@@ -1,11 +1,19 @@
-# Challenge Soup Api
+# Challenge Weather Api
 ###### Autor: Charles Rodríguez
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+## Api Running in heroku ~>
+[![Build Status](https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg)](https://weather-api-charles.herokuapp.com/v1)
+
+<a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
+<img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
+</a>
+<a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
+<img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
+</a>
 
 ## Instalación
 1. clona el repositorio de Soup Api:
 ```
-git clone git@github.com:charlescart/soup-api.git
+git clone git@github.com:charlescart/weather-api.git
 ```
 
 2. instalar paquetes de npm:
@@ -21,6 +29,9 @@ npm i
 ```
 npm start
 ```
+<a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
+<img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
+</a>
 
 
 5. Para generar la transpilacion de TypeScript a Js a traves de la consola ubicados en la raiz del proyecto lanzar el comando `npm run tsc`. El transpilado se genera en la raiz del proyecto especificamente en la carpeta dist `/dist`.
@@ -28,108 +39,164 @@ npm start
 
 > # Como usar
 ***coleccion de Postman del Api***
-<br> [Documentación Detallada](https://documenter.getpostman.com/view/11620246/Szzg8yR1)
+<br> [Documentación Detallada Online](https://documenter.getpostman.com/view/11620246/Szzg8yR1)
+<br> [Backup de Postman](https://documenter.getpostman.com/view/11620246/Szzg8yR1)
 >
-***Ejemplo #1:*** Matriz irregular, palabras a buscar: **OIE, E4, 5e, hoL y 1**
-<br> Metodo ***POST***
+***Ejemplo #1:*** Obtiene informacion del clima a traves de geolocalizacion de IP.
+<br> Metodo ***GET***
 ```
-localhost:8086/api/soup
-```
-HEADERS     application/json
-<br>BODY raw
-```
-{
-    "soup": [
-        ["O", "I", "E"],
-        ["I", "I", "X", "4"],
-        ["E", "X", "E"],
-        ["E", "X", "E", "5"],
-        ["E"]
-    ],
-    "searchWords": ["OIE", "E4", "5e", "hoL", "1"]
-}
+localhost:8086/v1/location
 ```
 Respuesta:
 ```
 {
-  "1": 0,
-  "OIE": 3,
-  "E4": 2,
-  "5E": 2,
-  "HOL": 0
+    "clientIp": "186.122.141.220",
+    "infoFromYourIp": {
+        "city": "Martin Coronado",
+        "country": "AR",
+        "coord": {
+            "lat": -34.5708,
+            "lon": -58.6243
+        }
+    },
+    "weather": {
+        "climateReferenceZone": "Hurlingham",
+        "country": "AR",
+        "coord": {
+            "lat": -34.5883,
+            "lon": -58.6391
+        },
+        "forescast": {
+            "2020-07-13": {
+                "12:00:00": {
+                    "tempMax": 7.95,
+                    "tempMin": 7.61,
+                    "feelsLike": 2.49,
+                    "description": "nubes",
+                    "temperatureUnit": "Celsius"
+                },
+                "15:00:00": {
+                    "tempMax": 9.69,
+                    "tempMin": 9.38,
+                    "feelsLike": 3.5,
+                    "description": "nubes rotas",
+                    "temperatureUnit": "Celsius"
+                },
+                "18:00:00": {
+                    "tempMax": 11.18,
+                    "tempMin": 10.99,
+                    "feelsLike": 4.96,
+                    "description": "nubes dispersas",
+                    "temperatureUnit": "Celsius"
+                },
+                "21:00:00": {
+                    "tempMax": 9.77,
+                    "tempMin": 9.76,
+                    "feelsLike": 4.51,
+                    "description": "cielo claro",
+                    "temperatureUnit": "Celsius"
+                }
+            },
+            ......
+        }
+    }
 }
 ```
 
 >
-***Ejemplo #2:*** Matriz cuadrada, palabra a buscar: **OIE**
-<br> Metodo ***POST***
+***Ejemplo #2:*** Obtiene el pronostico del clima de una ciudad en especifico hasta 5 dias. El parametro City es opcional, si no se suministra una ciudad intentará localizar la geolocalización de su IP.
+<br> Metodo ***GET***
 ```
-localhost:8086/api/soup
-```
-HEADERS     application/json
-<br>BODY raw
-```
-{
-    "soup": [
-        ["O", "I", "E"],
-        ["I", "I", "X"],
-        ["E", "X", "E"],
-    ],
-    "searchWords": ["OIE"]
-}
+localhost:8086/v1/current/:city?
 ```
 Respuesta:
 ```
 {
-  "OIE": 3
+    "city": "Buenos Aires",
+    "country": "AR",
+    "coord": {
+        "lon": -58.38,
+        "lat": -34.61
+    },
+    "temp": 8.93,
+    "tempMax": 9.44,
+    "tempMin": 8.33,
+    "feelsLike": 4.34,
+    "description": "nubes"
 }
 ```
+
+>
+***Ejemplo #3:*** Obtiene el pronostico del clima de una ciudad en especifico hasta 5 dias. El parametro City es opcional, si no se suministra una ciudad intentará localizar la geolocalización de su IP.
+<br> Metodo ***GET***
+```
+localhost:8086/v1/forecast/:city?
+```
+Respuesta:
+```
+{
+    "climateReferenceZone": "Caracas",
+    "country": "VE",
+    "coord": {
+        "lat": 10.488,
+        "lon": -66.8792
+    },
+    "forescast": {
+        "2020-07-13": {
+            "12:00:00": {
+                "tempMax": 21.32,
+                "tempMin": 20.93,
+                "feelsLike": 22.72,
+                "description": "nubes dispersas",
+                "temperatureUnit": "Celsius"
+            },
+            "15:00:00": {
+                "tempMax": 26.37,
+                "tempMin": 25.12,
+                "feelsLike": 26.77,
+                "description": "nubes rotas",
+                "temperatureUnit": "Celsius"
+            },
+            "18:00:00": {
+                "tempMax": 27.55,
+                "tempMin": 27.1,
+                "feelsLike": 29.36,
+                "description": "lluvia ligera",
+                "temperatureUnit": "Celsius"
+            },
+            "21:00:00": {
+                "tempMax": 24.78,
+                "tempMin": 24.75,
+                "feelsLike": 28.37,
+                "description": "lluvia ligera",
+                "temperatureUnit": "Celsius"
+            }
+        },
+        .......
+    }
+}
+```
+
 > # Ejecución de test unitarios
 1. ejecutar los test unitarios desarrollados con Jest, a traves de tu consola ejecuta:
 ```
 npm t
 ```
 salida:
-```
- PASS  src/features/soup/__test__/SoupRepository.spec.ts
- PASS  src/features/home/__test__/HomeController.spec.ts
- PASS  src/features/soup/__test__/SoupController.spec.ts
+<a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
+<img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
+</a>
 
-Test Suites: 3 passed, 3 total
-Tests:       18 passed, 18 total
-Snapshots:   17 passed, 17 total
-Time:        4.362 s
-Ran all test suites.
-```
 2. ejecutar ***coverage*** con Jest:
 ```
 npm run test:coverage
 ```
 salida:
-```
- PASS  src/features/soup/__test__/SoupRepository.spec.ts
- PASS  src/features/home/__test__/HomeController.spec.ts
- PASS  src/features/soup/__test__/SoupController.spec.ts
-------------------------------|---------|----------|---------|---------|-------------------
-File                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-------------------------------|---------|----------|---------|---------|-------------------
-All files                     |     100 |      100 |     100 |     100 |                   
- src                          |     100 |      100 |     100 |     100 |                   
-  server.ts                   |     100 |      100 |     100 |     100 |                   
- src/features/home            |     100 |      100 |     100 |     100 |                   
-  HomeController.ts           |     100 |      100 |     100 |     100 |                   
- src/features/soup            |     100 |      100 |     100 |     100 |                   
-  SoupController.ts           |     100 |      100 |     100 |     100 |                   
-  SoupRepository.ts           |     100 |      100 |     100 |     100 |                   
- src/features/soup/validators |     100 |      100 |     100 |     100 |                   
-  soupDto.ts                  |     100 |      100 |     100 |     100 |                   
-------------------------------|---------|----------|---------|---------|-------------------
+<a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
+<img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
+</a>
 
-Test Suites: 3 passed, 3 total
-Tests:       18 passed, 18 total
-Snapshots:   17 passed, 17 total
-Time:        4.797 s, estimated 5 s
-Ran all test suites.
-
-```
 Nota: una vez generado el coverage con Jest podrá ir a la raiz del proyecto y dirigirse a:  `/coverage/lcov-report/index.html` y abrir el ***index.html*** con su navegador, así podrá tener una mejor detalle del coverage generado por Jest. 
+<a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
+<img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
+</a>
