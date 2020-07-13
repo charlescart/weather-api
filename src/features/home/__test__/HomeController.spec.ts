@@ -3,9 +3,9 @@ import request from 'supertest'
 
 describe('HomeController', () => {
   describe('routes', () => {
-    it('GET /api', done => {
+    it('GET /v1', done => {
 
-      request(app).get('/api')
+      request(app).get('/v1')
         .set('Content-Type', 'application/json')
         .set('Accept', 'application/json')
         .expect(200)

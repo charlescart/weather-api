@@ -4,13 +4,12 @@ import { ExpressMiddlewareInterface } from 'routing-controllers';
 import { Request, Response, NextFunction } from 'express';
 import { getClientIp } from 'request-ip';
 
-type Ip = string | null;
 export default class RequestIp implements ExpressMiddlewareInterface {
   use(req: Request, res: Response, next: NextFunction) {
-    req.query.clientIp = getClientIp(req) as string | undefined;
+    req.params.clientIp = getClientIp(req) || '';
 
-    if (process.env.NODE_ENV === 'development') {
-      // req.query.clientIp = '186.122.141.220'; // testing in local
+    if (process.env.NODE_ENV === 'development' && req.params.clientIp === '::1') {
+      req.params.clientIp = '186.122.141.220'; // testing in local
     }
 
     next();

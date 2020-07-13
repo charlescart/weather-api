@@ -9,7 +9,7 @@ useExpressServer(app, {
   routePrefix: '/v1',
   cors: true,
   controllers: [`${__dirname}/features/**/*Controller.ts`],
-  middlewares: [`${__dirname}/middlewares/*.ts`],
+  middlewares: [`${__dirname}/middlewares/autoload/*.ts`],
 });
 
 export default app;

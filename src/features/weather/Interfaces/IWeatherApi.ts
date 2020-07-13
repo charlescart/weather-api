@@ -2,7 +2,7 @@
 /* eslint-disable eol-last */
 /* eslint-disable semi */
 
-export default interface IWeatherApi {
+export interface IWeatherForecast {
   cod: '200';
   message: number;
   cnt: number,
@@ -57,8 +57,8 @@ export interface IWeather {
   icon: string;
 }
 
-export interface ITransformWeatherResponse {
-  climateReferenceCity: string;
+export interface IWeatherForecastResponse {
+  climateReferenceZone: string;
   country: string;
   coord: {
     lat: number,
@@ -77,4 +77,37 @@ export interface IForescastDays {
       temperatureUnit: string;
     }
   };
+}
+
+export interface IWeatherCurrent {
+  name: string;
+  cod: '200';
+  weather: IWeather[];
+  main: {
+    temp: number;
+    temp_min: number;
+    temp_max: number;
+    feels_like: number;
+  };
+  coord: {
+    lat: number,
+    lon: number
+  };
+  sys: {
+    country: string;
+  };
+}
+
+export interface IWeatherCurrentResponse {
+  city: string;
+  country: string;
+  coord: {
+    lat: number,
+    lon: number
+  };
+  temp: number;
+  tempMin: number;
+  tempMax: number;
+  feelsLike: number;
+  description: string;
 }

@@ -1,7 +1,7 @@
 /* eslint-disable eol-last */
 /* eslint-disable semi */
 
-import { ITransformWeatherResponse } from './IWeatherApi';
+import { WeatherApi } from '../WeatherTypes';
 
 export default interface ILocationByIp {
   city: string;
@@ -15,5 +15,5 @@ export default interface ILocationByIp {
 export interface ILocation {
   clientIp: string;
   infoFromYourIp: ILocationByIp;
-  weather: ITransformWeatherResponse;
+  weather: WeatherApi;
 }
