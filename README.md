@@ -12,7 +12,7 @@
 
 ## Instalación
 
-1. clona el repositorio de Soup Api:
+1. clona el repositorio de Weather Api:
 ```
 git clone git@github.com:charlescart/weather-api.git
 ```
