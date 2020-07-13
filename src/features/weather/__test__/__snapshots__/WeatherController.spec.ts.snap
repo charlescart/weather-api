@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherController EndPoints Location, Current and Forecast GET /v1/current without city name and with IP from Bengaluru/India 1`] = `
+Object {
+  "city": "Bengaluru",
+  "coord": Any<Object>,
+  "country": "IN",
+  "description": Any<String>,
+  "feelsLike": Any<Number>,
+  "temp": Any<Number>,
+  "tempMax": Any<Number>,
+  "tempMin": Any<Number>,
+}
+`;
+
+exports[`WeatherController EndPoints Location, Current and Forecast GET /v1/current without city name and with IP from Hurlingham/Argentina 1`] = `
+Object {
+  "city": "Hurlingham",
+  "coord": Any<Object>,
+  "country": "AR",
+  "description": Any<String>,
+  "feelsLike": Any<Number>,
+  "temp": Any<Number>,
+  "tempMax": Any<Number>,
+  "tempMin": Any<Number>,
+}
+`;
+
+exports[`WeatherController EndPoints Location, Current and Forecast GET /v1/current/127barcelona52es7329437 with city name impossible 1`] = `
+Object {
+  "city": "Barcelona",
+  "coord": Any<Object>,
+  "country": "ES",
+  "description": Any<String>,
+  "feelsLike": Any<Number>,
+  "temp": Any<Number>,
+  "tempMax": Any<Number>,
+  "tempMin": Any<Number>,
+}
+`;
+
+exports[`WeatherController EndPoints Location, Current and Forecast GET /v1/current/caracas with city name Caracas/Venezuela :D :D :D 1`] = `
+Object {
+  "city": "Caracas",
+  "coord": Any<Object>,
+  "country": "VE",
+  "description": Any<String>,
+  "feelsLike": Any<Number>,
+  "temp": Any<Number>,
+  "tempMax": Any<Number>,
+  "tempMin": Any<Number>,
+}
+`;
+
+exports[`WeatherController EndPoints Location, Current and Forecast GET /v1/current/h with city name very short 1`] = `
+Object {
+  "entry": Object {
+    "params": Object {},
+    "query": Object {},
+  },
+  "response": Object {
+    "error": "BadRequestError",
+    "msg": Array [
+      Object {
+        "constraints": Object {
+          "minLength": "city must be longer than or equal to 3 characters",
+        },
+        "property": "city",
+      },
+    ],
+  },
+}
+`;
+
+exports[`WeatherController EndPoints Location, Current and Forecast GET /v1/forecast without city name and with IP from Toronto/Canada 1`] = `
+Object {
+  "climateReferenceZone": "Downtown Toronto",
+  "coord": Object {
+    "lat": Any<Number>,
+    "lon": Any<Number>,
+  },
+  "country": "CA",
+  "forescast": Any<Object>,
+}
+`;
+
+exports[`WeatherController EndPoints Location, Current and Forecast GET /v1/forecast/&1$7japan?*,jp with city name impossible 1`] = `
+Object {
+  "climateReferenceZone": "Japan",
+  "coord": Object {
+    "lat": Any<Number>,
+    "lon": Any<Number>,
+  },
+  "country": "JP",
+  "forescast": Any<Object>,
+}
+`;
+
+exports[`WeatherController EndPoints Location, Current and Forecast GET /v1/forecast/japan with city name Japan/Japan 1`] = `
+Object {
+  "climateReferenceZone": "Japan",
+  "coord": Object {
+    "lat": Any<Number>,
+    "lon": Any<Number>,
+  },
+  "country": "JP",
+  "forescast": Any<Object>,
+}
+`;
+
+exports[`WeatherController EndPoints Location, Current and Forecast GET /v1/forecast/ol with city name very short 1`] = `
+Object {
+  "entry": Object {
+    "params": Object {},
+    "query": Object {},
+  },
+  "response": Object {
+    "error": "BadRequestError",
+    "msg": Array [
+      Object {
+        "constraints": Object {
+          "minLength": "city must be longer than or equal to 3 characters",
+        },
+        "property": "city",
+      },
+    ],
+  },
+}
+`;
+
+exports[`WeatherController EndPoints Location, Current and Forecast GET /v1/location with IP from San Francisco/US 1`] = `
+Object {
+  "clientIp": "162.243.152.177",
+  "infoFromYourIp": Object {
+    "city": "San Francisco",
+    "coord": Object {
+      "lat": Any<Number>,
+      "lon": Any<Number>,
+    },
+    "country": "US",
+  },
+  "weather": Object {
+    "climateReferenceZone": "San Francisco",
+    "coord": Object {
+      "lat": Any<Number>,
+      "lon": Any<Number>,
+    },
+    "country": "US",
+    "forescast": Any<Object>,
+  },
+}
+`;
+
+exports[`WeatherController EndPoints Location, Current and Forecast GET /v1/location with IP invalid ::1 in localhost 1`] = `
+Object {
+  "entry": Object {
+    "params": Object {},
+    "query": Object {},
+  },
+  "response": Object {
+    "error": "BadRequestError",
+    "msg": Array [
+      Object {
+        "constraints": Object {
+          "isIp": "clientIp must be an ip address",
+        },
+        "property": "clientIp",
+      },
+    ],
+  },
+}
+`;

@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "a479cbbe-afbd-472d-a59e-c9ed11abbe7d",
+		"name": "Weather Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}:{{port}}/v1/location",
+					"host": [
+						"{{base_url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"location"
+					]
+				},
+				"description": "Obtiene informacion del clima a traves de geolocalizacion de IP."
+			},
+			"response": [
+				{
+					"name": "Location",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/v1/location",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"v1",
+								"location"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4960"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1360-q2q4odNpvH2TtLq/v8EkAoqL858\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jul 2020 03:02:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"clientIp\": \"186.122.141.220\",\n    \"infoFromYourIp\": {\n        \"city\": \"Martin Coronado\",\n        \"country\": \"AR\",\n        \"coord\": {\n            \"lat\": -34.5708,\n            \"lon\": -58.6243\n        }\n    },\n    \"weather\": {\n        \"climateReferenceCity\": \"Hurlingham\",\n        \"country\": \"AR\",\n        \"coord\": {\n            \"lat\": -34.5883,\n            \"lon\": -58.6391\n        },\n        \"forescast\": {\n            \"2020-07-12\": {\n                \"06:00:00\": {\n                    \"tempMax\": 9.93,\n                    \"tempMin\": 9.76,\n                    \"feelsLike\": 5.9,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"09:00:00\": {\n                    \"tempMax\": 9.92,\n                    \"tempMin\": 9.85,\n                    \"feelsLike\": 5.69,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"12:00:00\": {\n                    \"tempMax\": 9.41,\n                    \"tempMin\": 9.4,\n                    \"feelsLike\": 4.87,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"15:00:00\": {\n                    \"tempMax\": 11.67,\n                    \"tempMin\": 11.65,\n                    \"feelsLike\": 6.62,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"18:00:00\": {\n                    \"tempMax\": 13.88,\n                    \"tempMin\": 13.88,\n                    \"feelsLike\": 7.62,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"21:00:00\": {\n                    \"tempMax\": 11.78,\n                    \"tempMin\": 11.78,\n                    \"feelsLike\": 6.17,\n                    \"description\": \"nubes rotas\",\n                    \"temperatureUnit\": \"Celsius\"\n                }\n            },\n            \"2020-07-13\": {\n                \"00:00:00\": {\n                    \"tempMax\": 10.56,\n                    \"tempMin\": 10.56,\n                    \"feelsLike\": 6.31,\n                    \"description\": \"nubes rotas\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"03:00:00\": {\n                    \"tempMax\": 9.1,\n                    \"tempMin\": 9.1,\n                    \"feelsLike\": 4.83,\n                    \"description\": \"nubes dispersas\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"06:00:00\": {\n                    \"tempMax\": 8.5,\n                    \"tempMin\": 8.5,\n                    \"feelsLike\": 3.55,\n                    \"description\": \"nubes dispersas\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"09:00:00\": {\n                    \"tempMax\": 7.85,\n                    \"tempMin\": 7.85,\n                    \"feelsLike\": 3.02,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"12:00:00\": {\n                    \"tempMax\": 7.08,\n                    \"tempMin\": 7.08,\n                    \"feelsLike\": 2.85,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"15:00:00\": {\n                    \"tempMax\": 10.35,\n                    \"tempMin\": 10.35,\n                    \"feelsLike\": 5.01,\n                    \"description\": \"nubes rotas\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"18:00:00\": {\n                    \"tempMax\": 11.73,\n                    \"tempMin\": 11.73,\n                    \"feelsLike\": 5.86,\n                    \"description\": \"nubes rotas\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"21:00:00\": {\n                    \"tempMax\": 10.21,\n                    \"tempMin\": 10.21,\n                    \"feelsLike\": 4.8,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                }\n            },\n            \"2020-07-14\": {\n                \"00:00:00\": {\n                    \"tempMax\": 8.57,\n                    \"tempMin\": 8.57,\n                    \"feelsLike\": 3.3,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"03:00:00\": {\n                    \"tempMax\": 7.37,\n                    \"tempMin\": 7.37,\n                    \"feelsLike\": 2.63,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"06:00:00\": {\n                    \"tempMax\": 6.01,\n                    \"tempMin\": 6.01,\n                    \"feelsLike\": 1.79,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"09:00:00\": {\n                    \"tempMax\": 5,\n                    \"tempMin\": 5,\n                    \"feelsLike\": 1.23,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"12:00:00\": {\n                    \"tempMax\": 4.7,\n                    \"tempMin\": 4.7,\n                    \"feelsLike\": 1.35,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"15:00:00\": {\n                    \"tempMax\": 8.53,\n                    \"tempMin\": 8.53,\n                    \"feelsLike\": 4.75,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"18:00:00\": {\n                    \"tempMax\": 10.73,\n                    \"tempMin\": 10.73,\n                    \"feelsLike\": 6.96,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"21:00:00\": {\n                    \"tempMax\": 9.42,\n                    \"tempMin\": 9.42,\n                    \"feelsLike\": 6.34,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                }\n            },\n            \"2020-07-15\": {\n                \"00:00:00\": {\n                    \"tempMax\": 8.39,\n                    \"tempMin\": 8.39,\n                    \"feelsLike\": 5.01,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"03:00:00\": {\n                    \"tempMax\": 7.4,\n                    \"tempMin\": 7.4,\n                    \"feelsLike\": 3.34,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"06:00:00\": {\n                    \"tempMax\": 6.66,\n                    \"tempMin\": 6.66,\n                    \"feelsLike\": 1.97,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"09:00:00\": {\n                    \"tempMax\": 5.77,\n                    \"tempMin\": 5.77,\n                    \"feelsLike\": 1.22,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"12:00:00\": {\n                    \"tempMax\": 5.65,\n                    \"tempMin\": 5.65,\n                    \"feelsLike\": 1.42,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"15:00:00\": {\n                    \"tempMax\": 10.02,\n                    \"tempMin\": 10.02,\n                    \"feelsLike\": 6.2,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"18:00:00\": {\n                    \"tempMax\": 13.18,\n                    \"tempMin\": 13.18,\n                    \"feelsLike\": 9.54,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"21:00:00\": {\n                    \"tempMax\": 11.72,\n                    \"tempMin\": 11.72,\n                    \"feelsLike\": 8.59,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                }\n            },\n            \"2020-07-16\": {\n                \"00:00:00\": {\n                    \"tempMax\": 9.98,\n                    \"tempMin\": 9.98,\n                    \"feelsLike\": 6.79,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"03:00:00\": {\n                    \"tempMax\": 8.99,\n                    \"tempMin\": 8.99,\n                    \"feelsLike\": 5.87,\n                    \"description\": \"algo de nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"06:00:00\": {\n                    \"tempMax\": 8.14,\n                    \"tempMin\": 8.14,\n                    \"feelsLike\": 5.46,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"09:00:00\": {\n                    \"tempMax\": 7.95,\n                    \"tempMin\": 7.95,\n                    \"feelsLike\": 5.24,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"12:00:00\": {\n                    \"tempMax\": 8.12,\n                    \"tempMin\": 8.12,\n                    \"feelsLike\": 5.01,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"15:00:00\": {\n                    \"tempMax\": 11.75,\n                    \"tempMin\": 11.75,\n                    \"feelsLike\": 8,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"18:00:00\": {\n                    \"tempMax\": 12.61,\n                    \"tempMin\": 12.61,\n                    \"feelsLike\": 8.52,\n                    \"description\": \"algo de nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"21:00:00\": {\n                    \"tempMax\": 11.15,\n                    \"tempMin\": 11.15,\n                    \"feelsLike\": 6.59,\n                    \"description\": \"nubes dispersas\",\n                    \"temperatureUnit\": \"Celsius\"\n                }\n            },\n            \"2020-07-17\": {\n                \"00:00:00\": {\n                    \"tempMax\": 10.72,\n                    \"tempMin\": 10.72,\n                    \"feelsLike\": 6.49,\n                    \"description\": \"nubes rotas\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"03:00:00\": {\n                    \"tempMax\": 10.32,\n                    \"tempMin\": 10.32,\n                    \"feelsLike\": 5.97,\n                    \"description\": \"nubes rotas\",\n                    \"temperatureUnit\": \"Celsius\"\n                }\n            }\n        }\n    }\n}"
+				},
+				{
+					"name": "Location",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/v1/location",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"v1",
+								"location"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4962"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1362-pB7t5tbJ9gCQ5Z9wE2Qj1bxh4DI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Jul 2020 09:15:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"clientIp\": \"186.122.141.220\",\n    \"infoFromYourIp\": {\n        \"city\": \"Martin Coronado\",\n        \"country\": \"AR\",\n        \"coord\": {\n            \"lat\": -34.5708,\n            \"lon\": -58.6243\n        }\n    },\n    \"weather\": {\n        \"climateReferenceZone\": \"Hurlingham\",\n        \"country\": \"AR\",\n        \"coord\": {\n            \"lat\": -34.5883,\n            \"lon\": -58.6391\n        },\n        \"forescast\": {\n            \"2020-07-13\": {\n                \"12:00:00\": {\n                    \"tempMax\": 7.95,\n                    \"tempMin\": 7.61,\n                    \"feelsLike\": 2.49,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"15:00:00\": {\n                    \"tempMax\": 9.69,\n                    \"tempMin\": 9.38,\n                    \"feelsLike\": 3.5,\n                    \"description\": \"nubes rotas\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"18:00:00\": {\n                    \"tempMax\": 11.18,\n                    \"tempMin\": 10.99,\n                    \"feelsLike\": 4.96,\n                    \"description\": \"nubes dispersas\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"21:00:00\": {\n                    \"tempMax\": 9.77,\n                    \"tempMin\": 9.76,\n                    \"feelsLike\": 4.51,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                }\n            },\n            \"2020-07-14\": {\n                \"00:00:00\": {\n                    \"tempMax\": 8.58,\n                    \"tempMin\": 8.58,\n                    \"feelsLike\": 4.01,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"03:00:00\": {\n                    \"tempMax\": 7.29,\n                    \"tempMin\": 7.29,\n                    \"feelsLike\": 3.07,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"06:00:00\": {\n                    \"tempMax\": 6.3,\n                    \"tempMin\": 6.3,\n                    \"feelsLike\": 1.92,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"09:00:00\": {\n                    \"tempMax\": 5.54,\n                    \"tempMin\": 5.54,\n                    \"feelsLike\": 1.42,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"12:00:00\": {\n                    \"tempMax\": 5.1,\n                    \"tempMin\": 5.1,\n                    \"feelsLike\": 1.14,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"15:00:00\": {\n                    \"tempMax\": 9.12,\n                    \"tempMin\": 9.12,\n                    \"feelsLike\": 5.37,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"18:00:00\": {\n                    \"tempMax\": 11.19,\n                    \"tempMin\": 11.19,\n                    \"feelsLike\": 7.18,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"21:00:00\": {\n                    \"tempMax\": 9.9,\n                    \"tempMin\": 9.9,\n                    \"feelsLike\": 6.97,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                }\n            },\n            \"2020-07-15\": {\n                \"00:00:00\": {\n                    \"tempMax\": 8.94,\n                    \"tempMin\": 8.94,\n                    \"feelsLike\": 6.05,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"03:00:00\": {\n                    \"tempMax\": 8.07,\n                    \"tempMin\": 8.07,\n                    \"feelsLike\": 4.8,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"06:00:00\": {\n                    \"tempMax\": 7.11,\n                    \"tempMin\": 7.11,\n                    \"feelsLike\": 3.66,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"09:00:00\": {\n                    \"tempMax\": 6.33,\n                    \"tempMin\": 6.33,\n                    \"feelsLike\": 2.7,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"12:00:00\": {\n                    \"tempMax\": 6.33,\n                    \"tempMin\": 6.33,\n                    \"feelsLike\": 2.36,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"15:00:00\": {\n                    \"tempMax\": 10.01,\n                    \"tempMin\": 10.01,\n                    \"feelsLike\": 5.76,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"18:00:00\": {\n                    \"tempMax\": 12.65,\n                    \"tempMin\": 12.65,\n                    \"feelsLike\": 8.32,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"21:00:00\": {\n                    \"tempMax\": 11.3,\n                    \"tempMin\": 11.3,\n                    \"feelsLike\": 7.18,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                }\n            },\n            \"2020-07-16\": {\n                \"00:00:00\": {\n                    \"tempMax\": 10.04,\n                    \"tempMin\": 10.04,\n                    \"feelsLike\": 5.86,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"03:00:00\": {\n                    \"tempMax\": 9,\n                    \"tempMin\": 9,\n                    \"feelsLike\": 4.82,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"06:00:00\": {\n                    \"tempMax\": 8.29,\n                    \"tempMin\": 8.29,\n                    \"feelsLike\": 3.99,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"09:00:00\": {\n                    \"tempMax\": 7.21,\n                    \"tempMin\": 7.21,\n                    \"feelsLike\": 3.73,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"12:00:00\": {\n                    \"tempMax\": 7.22,\n                    \"tempMin\": 7.22,\n                    \"feelsLike\": 4.56,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"15:00:00\": {\n                    \"tempMax\": 11.17,\n                    \"tempMin\": 11.17,\n                    \"feelsLike\": 8.19,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"18:00:00\": {\n                    \"tempMax\": 12.17,\n                    \"tempMin\": 12.17,\n                    \"feelsLike\": 8.66,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"21:00:00\": {\n                    \"tempMax\": 10.69,\n                    \"tempMin\": 10.69,\n                    \"feelsLike\": 7.09,\n                    \"description\": \"cielo claro\",\n                    \"temperatureUnit\": \"Celsius\"\n                }\n            },\n            \"2020-07-17\": {\n                \"00:00:00\": {\n                    \"tempMax\": 10.14,\n                    \"tempMin\": 10.14,\n                    \"feelsLike\": 7.51,\n                    \"description\": \"algo de nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"03:00:00\": {\n                    \"tempMax\": 9.86,\n                    \"tempMin\": 9.86,\n                    \"feelsLike\": 7.55,\n                    \"description\": \"nubes rotas\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"06:00:00\": {\n                    \"tempMax\": 9.36,\n                    \"tempMin\": 9.36,\n                    \"feelsLike\": 6.99,\n                    \"description\": \"nubes rotas\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"09:00:00\": {\n                    \"tempMax\": 8.87,\n                    \"tempMin\": 8.87,\n                    \"feelsLike\": 6.99,\n                    \"description\": \"nubes rotas\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"12:00:00\": {\n                    \"tempMax\": 9.5,\n                    \"tempMin\": 9.5,\n                    \"feelsLike\": 7.12,\n                    \"description\": \"nubes rotas\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"15:00:00\": {\n                    \"tempMax\": 12.28,\n                    \"tempMin\": 12.28,\n                    \"feelsLike\": 10.06,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"18:00:00\": {\n                    \"tempMax\": 14.38,\n                    \"tempMin\": 14.38,\n                    \"feelsLike\": 11.83,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"21:00:00\": {\n                    \"tempMax\": 13.26,\n                    \"tempMin\": 13.26,\n                    \"feelsLike\": 10.66,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                }\n            },\n            \"2020-07-18\": {\n                \"00:00:00\": {\n                    \"tempMax\": 13.52,\n                    \"tempMin\": 13.52,\n                    \"feelsLike\": 11.46,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"03:00:00\": {\n                    \"tempMax\": 13.42,\n                    \"tempMin\": 13.42,\n                    \"feelsLike\": 12.53,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"06:00:00\": {\n                    \"tempMax\": 13.3,\n                    \"tempMin\": 13.3,\n                    \"feelsLike\": 13.52,\n                    \"description\": \"lluvia ligera\",\n                    \"temperatureUnit\": \"Celsius\"\n                },\n                \"09:00:00\": {\n                    \"tempMax\": 13.26,\n                    \"tempMin\": 13.26,\n                    \"feelsLike\": 13.05,\n                    \"description\": \"nubes\",\n                    \"temperatureUnit\": \"Celsius\"\n                }\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Current",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}:{{port}}/v1/current/buenos aires,ar",
+					"host": [
+						"{{base_url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"current",
+						"buenos aires,ar"
+					]
+				},
+				"description": "Obtiene el pronostico del clima de una ciudad en especifico hasta 5 dias. El parametro City es opcional, si no se suministra una ciudad intentará localizar la geolocalización de su IP."
+			},
+			"response": [
+				{
+					"name": "Current",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/v1/current/barcelona,es",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"v1",
+								"current",
+								"barcelona,es"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "163"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a3-iDgetaG4pClWKR20wZnxdnAW5tg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Jul 2020 09:16:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"city\": \"Barcelona\",\n    \"country\": \"ES\",\n    \"coord\": {\n        \"lon\": 2.16,\n        \"lat\": 41.39\n    },\n    \"temp\": 27.65,\n    \"tempMax\": 28.89,\n    \"tempMin\": 26.11,\n    \"feelsLike\": 29.54,\n    \"description\": \"nubes dispersas\"\n}"
+				},
+				{
+					"name": "Current",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/v1/current/buenos aires,ar",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"v1",
+								"current",
+								"buenos aires,ar"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "155"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9b-dSuFm1HG1OMFmiN1s9Pd1vIT1ns\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Jul 2020 09:17:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"city\": \"Buenos Aires\",\n    \"country\": \"AR\",\n    \"coord\": {\n        \"lon\": -58.38,\n        \"lat\": -34.61\n    },\n    \"temp\": 8.93,\n    \"tempMax\": 9.44,\n    \"tempMin\": 8.33,\n    \"feelsLike\": 4.34,\n    \"description\": \"nubes\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Forecast",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}:{{port}}/v1/forecast/caracas",
+					"host": [
+						"{{base_url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"forecast",
+						"caracas"
+					]
+				},
+				"description": "Obtiene el pronostico del clima de una ciudad en especifico hasta 5 dias. El parametro City es opcional, si no se suministra una ciudad intentará localizar la geolocalización de su IP."
+			},
+			"response": [
+				{
+					"name": "Forecast",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/v1/forecast/caracas",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"v1",
+								"forecast",
+								"caracas"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4959"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"135f-TGz/obmEnkql5kPCUNxToDZqdGk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 Jul 2020 09:17:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"climateReferenceZone\": \"Caracas\",\n    \"country\": \"VE\",\n    \"coord\": {\n        \"lat\": 10.488,\n        \"lon\": -66.8792\n    },\n    \"forescast\": {\n        \"2020-07-13\": {\n            \"12:00:00\": {\n                \"tempMax\": 21.32,\n                \"tempMin\": 20.93,\n                \"feelsLike\": 22.72,\n                \"description\": \"nubes dispersas\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"15:00:00\": {\n                \"tempMax\": 26.37,\n                \"tempMin\": 25.12,\n                \"feelsLike\": 26.77,\n                \"description\": \"nubes rotas\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"18:00:00\": {\n                \"tempMax\": 27.55,\n                \"tempMin\": 27.1,\n                \"feelsLike\": 29.36,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"21:00:00\": {\n                \"tempMax\": 24.78,\n                \"tempMin\": 24.75,\n                \"feelsLike\": 28.37,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            }\n        },\n        \"2020-07-14\": {\n            \"00:00:00\": {\n                \"tempMax\": 21.45,\n                \"tempMin\": 21.45,\n                \"feelsLike\": 24.52,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"03:00:00\": {\n                \"tempMax\": 20.82,\n                \"tempMin\": 20.82,\n                \"feelsLike\": 23.31,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"06:00:00\": {\n                \"tempMax\": 20.12,\n                \"tempMin\": 20.12,\n                \"feelsLike\": 22.52,\n                \"description\": \"nubes\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"09:00:00\": {\n                \"tempMax\": 19.97,\n                \"tempMin\": 19.97,\n                \"feelsLike\": 22.08,\n                \"description\": \"nubes\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"12:00:00\": {\n                \"tempMax\": 21.75,\n                \"tempMin\": 21.75,\n                \"feelsLike\": 24.2,\n                \"description\": \"nubes\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"15:00:00\": {\n                \"tempMax\": 27.15,\n                \"tempMin\": 27.15,\n                \"feelsLike\": 28.98,\n                \"description\": \"nubes dispersas\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"18:00:00\": {\n                \"tempMax\": 26.28,\n                \"tempMin\": 26.28,\n                \"feelsLike\": 29.32,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"21:00:00\": {\n                \"tempMax\": 24.23,\n                \"tempMin\": 24.23,\n                \"feelsLike\": 27.91,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            }\n        },\n        \"2020-07-15\": {\n            \"00:00:00\": {\n                \"tempMax\": 20.97,\n                \"tempMin\": 20.97,\n                \"feelsLike\": 23.68,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"03:00:00\": {\n                \"tempMax\": 20.2,\n                \"tempMin\": 20.2,\n                \"feelsLike\": 22.62,\n                \"description\": \"nubes dispersas\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"06:00:00\": {\n                \"tempMax\": 19.52,\n                \"tempMin\": 19.52,\n                \"feelsLike\": 21.5,\n                \"description\": \"nubes rotas\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"09:00:00\": {\n                \"tempMax\": 18.68,\n                \"tempMin\": 18.68,\n                \"feelsLike\": 20.42,\n                \"description\": \"nubes rotas\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"12:00:00\": {\n                \"tempMax\": 21.3,\n                \"tempMin\": 21.3,\n                \"feelsLike\": 23.69,\n                \"description\": \"nubes dispersas\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"15:00:00\": {\n                \"tempMax\": 26.51,\n                \"tempMin\": 26.51,\n                \"feelsLike\": 28.72,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"18:00:00\": {\n                \"tempMax\": 27.4,\n                \"tempMin\": 27.4,\n                \"feelsLike\": 29.61,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"21:00:00\": {\n                \"tempMax\": 24.11,\n                \"tempMin\": 24.11,\n                \"feelsLike\": 27.53,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            }\n        },\n        \"2020-07-16\": {\n            \"00:00:00\": {\n                \"tempMax\": 20.55,\n                \"tempMin\": 20.55,\n                \"feelsLike\": 22.71,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"03:00:00\": {\n                \"tempMax\": 19.42,\n                \"tempMin\": 19.42,\n                \"feelsLike\": 21.38,\n                \"description\": \"cielo claro\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"06:00:00\": {\n                \"tempMax\": 18.67,\n                \"tempMin\": 18.67,\n                \"feelsLike\": 20.12,\n                \"description\": \"cielo claro\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"09:00:00\": {\n                \"tempMax\": 18.61,\n                \"tempMin\": 18.61,\n                \"feelsLike\": 20.09,\n                \"description\": \"cielo claro\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"12:00:00\": {\n                \"tempMax\": 21.3,\n                \"tempMin\": 21.3,\n                \"feelsLike\": 23.15,\n                \"description\": \"cielo claro\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"15:00:00\": {\n                \"tempMax\": 27.27,\n                \"tempMin\": 27.27,\n                \"feelsLike\": 27.9,\n                \"description\": \"cielo claro\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"18:00:00\": {\n                \"tempMax\": 26.72,\n                \"tempMin\": 26.72,\n                \"feelsLike\": 28.59,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"21:00:00\": {\n                \"tempMax\": 25.19,\n                \"tempMin\": 25.19,\n                \"feelsLike\": 28.68,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            }\n        },\n        \"2020-07-17\": {\n            \"00:00:00\": {\n                \"tempMax\": 20.57,\n                \"tempMin\": 20.57,\n                \"feelsLike\": 22.4,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"03:00:00\": {\n                \"tempMax\": 19.77,\n                \"tempMin\": 19.77,\n                \"feelsLike\": 20.99,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"06:00:00\": {\n                \"tempMax\": 19.46,\n                \"tempMin\": 19.46,\n                \"feelsLike\": 20.79,\n                \"description\": \"nubes\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"09:00:00\": {\n                \"tempMax\": 19.14,\n                \"tempMin\": 19.14,\n                \"feelsLike\": 20.23,\n                \"description\": \"nubes dispersas\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"12:00:00\": {\n                \"tempMax\": 22,\n                \"tempMin\": 22,\n                \"feelsLike\": 23.67,\n                \"description\": \"nubes dispersas\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"15:00:00\": {\n                \"tempMax\": 26.54,\n                \"tempMin\": 26.54,\n                \"feelsLike\": 27.86,\n                \"description\": \"nubes rotas\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"18:00:00\": {\n                \"tempMax\": 27.31,\n                \"tempMin\": 27.31,\n                \"feelsLike\": 29.96,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"21:00:00\": {\n                \"tempMax\": 24.38,\n                \"tempMin\": 24.38,\n                \"feelsLike\": 28.17,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            }\n        },\n        \"2020-07-18\": {\n            \"00:00:00\": {\n                \"tempMax\": 20.61,\n                \"tempMin\": 20.61,\n                \"feelsLike\": 23,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"03:00:00\": {\n                \"tempMax\": 19.94,\n                \"tempMin\": 19.94,\n                \"feelsLike\": 21.71,\n                \"description\": \"nubes rotas\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"06:00:00\": {\n                \"tempMax\": 19.41,\n                \"tempMin\": 19.41,\n                \"feelsLike\": 21.03,\n                \"description\": \"nubes\",\n                \"temperatureUnit\": \"Celsius\"\n            },\n            \"09:00:00\": {\n                \"tempMax\": 19.3,\n                \"tempMin\": 19.3,\n                \"feelsLike\": 21.19,\n                \"description\": \"lluvia ligera\",\n                \"temperatureUnit\": \"Celsius\"\n            }\n        }\n    }\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

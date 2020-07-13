@@ -6,7 +6,7 @@ import { getClientIp } from 'request-ip';
 
 export default class RequestIp implements ExpressMiddlewareInterface {
   use(req: Request, res: Response, next: NextFunction) {
-    req.params.clientIp = getClientIp(req) || '';
+    req.params.clientIp = getClientIp(req) as string;
 
     if (process.env.NODE_ENV === 'development' && req.params.clientIp === '::1') {
       // req.params.clientIp = '186.122.141.220'; // testing in local

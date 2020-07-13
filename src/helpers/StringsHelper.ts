@@ -6,6 +6,8 @@
 * y caracteres especiales de un string.
 * */
 export const CleaningCityName = (text: string): string => text
-  .split(/[0-9]|[^a-zA-Z]|[\s+|^\s+$]/)
-  .filter((item) => item.length > 0)
-  .join(',');
+  .replace(' ', 'xotr')
+  .split(/[0-9]|[^a-zA-Z,]|[\s+|^\s+$]/)
+  .filter((item) => item.match(/[a-zA-Z]/))
+  .join(',')
+  .replace('xotr', ' ');

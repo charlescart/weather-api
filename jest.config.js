@@ -10,4 +10,7 @@ module.exports = {
     '/node_modules/',
     '/dist/',
   ],
+  setupFiles: ['<rootDir>/.jest/varsEnv.js'],
 };
+
+// jest.setTimeout(30000);
