@@ -1,9 +1,8 @@
-# Challenge Weather Api
-###### Autor: Charles Rodríguez
+# Challenge Weather Api - Charles Rodríguez
 ## Api Running in heroku ~>
 <p align="center">
 <a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
-<img src="https://tiansss.github.io/img/heroku.png" alt="" style=" margin: auto; display: block; max-width: 30%;">
+<img src="https://tiansss.github.io/img/heroku.png" alt="" style=" margin: auto; display: block; max-width: 30%;" width="30%">
 </a>
 </p>
 
