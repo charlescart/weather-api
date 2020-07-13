@@ -6,11 +6,13 @@
 <img src="https://tiansss.github.io/img/heroku.png" alt="" style=" margin: auto; display: block;">
 </a>
 </p>
-<a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
-<img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
-</a>
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/charlescart/weather-api/master/src/public/postman_api.gif" alt="" style="max-width:100%;margin: auto;display: block;">
+</p>
 
 ## Instalación
+
 1. clona el repositorio de Soup Api:
 ```
 git clone git@github.com:charlescart/weather-api.git
@@ -29,10 +31,11 @@ npm i
 ```
 npm start
 ```
+<p align="center">
 <a target="_blank" rel="noopener noreferrer" href="https://weather-api-charles.herokuapp.com/v1">
 <img src="https://img.favpng.com/14/5/8/logo-node-js-heroku-scalable-vector-graphics-font-png-favpng-kRgbJRPKs2FdgHTuPaeu4Ec61.jpg" alt="" style="max-width:100%;margin: auto;display: block;">
 </a>
-
+</p>
 
 5. Para generar la transpilacion de TypeScript a Js a traves de la consola ubicados en la raiz del proyecto lanzar el comando `npm run tsc`. El transpilado se genera en la raiz del proyecto especificamente en la carpeta dist `/dist`.
 <br>***Nota: este paso es opcional y solo si quieres ver el codigo compilado.***
